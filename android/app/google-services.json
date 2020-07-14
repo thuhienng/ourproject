@@ -1,0 +1,77 @@
+{
+  "project_info": {
+    "project_number": "6759131387",
+    "firebase_url": "https://fitnessapp-c2d51.firebaseio.com",
+    "project_id": "fitnessapp-c2d51",
+    "storage_bucket": "fitnessapp-c2d51.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:6759131387:android:b59c5457c59ec91cb7685e",
+        "android_client_info": {
+          "package_name": "com.googlefit"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "6759131387-47ffgbfnuuoq5e622i3fp9776g7ho6cp.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDLYUq1CYGekPn02iAL0Y16T7oFvHrdm34"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "6759131387-47ffgbfnuuoq5e622i3fp9776g7ho6cp.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:6759131387:android:ed5fda9822b2be92b7685e",
+        "android_client_info": {
+          "package_name": "fitness.googlefit"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "6759131387-75d99u9htn7lufli7f62nltpvh7i0a1d.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "fitness.googlefit",
+            "certificate_hash": "5e8f16062ea3cd2c4a0d547876baa6f38cabf625"
+          }
+        },
+        {
+          "client_id": "6759131387-47ffgbfnuuoq5e622i3fp9776g7ho6cp.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDLYUq1CYGekPn02iAL0Y16T7oFvHrdm34"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "6759131387-47ffgbfnuuoq5e622i3fp9776g7ho6cp.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

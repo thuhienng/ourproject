@@ -1,4 +1,4 @@
-package com.googlefit;
+package fitness.googlefit;
 
 import com.facebook.react.ReactActivity;
 

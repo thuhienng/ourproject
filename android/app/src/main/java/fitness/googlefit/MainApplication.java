@@ -1,4 +1,4 @@
-package com.googlefit;
+package fitness.googlefit;
 
 import android.app.Application;
 import android.content.Context;
