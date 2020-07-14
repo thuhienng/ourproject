@@ -102,6 +102,9 @@ export default class Login extends Component {
             size={GoogleSigninButton.Size.Wide}
             color={GoogleSigninButton.Color.Dark}
             onPress={this._signIn} />
+            <Text> {this.state.name}</Text>
+            <Text> {this.state.email}</Text>
+            
 
         </View>
 
@@ -121,13 +124,15 @@ export default class Login extends Component {
     });
   }
   
-  signIn = async () => {
+ _signIn = async () => {
     try {
       await GoogleSignin.hasPlayServices();
       const userInfo = await GoogleSignin.signIn();
       console.log(userInfo)
 
-      //this.setState({ userInfo });
+      this.setState({ 
+        name: userInfo.user.name,
+        email : userInfo.user.email });
     } catch (error) {
       if (error.code === statusCodes.SIGN_IN_CANCELLED) {
         // user cancelled the login flow
