@@ -61,54 +61,24 @@ export default class Login extends Component {
             Let's join with us!
           </Text>
         </View>
-        <View style={styles.down}>
-          <View style={styles.textinputContainer}>
-            <Icon name={'md-person'} size={28} style={styles.IconInput}></Icon>
-            <TextInput style={styles.textInput}
-
-              placeholder="Enter your username"
-              onChangeText={(username) => this.setState({ username })}
-              value={this.state.username}>
-
-            </TextInput>
-          </View>
-          <View style={styles.textinputContainer}>
-            <Icon name={'md-lock'} size={28} style={styles.IconInput}></Icon>
-            <TextInput style={styles.textInput}
-              textContentType='password'
-              secureTextEntry={true}
-              placeholder='Enter your password'
-              // placeholderTextColor = 'white'
-              onChangeText={(password) => this.setState({ password })}
-              value={this.state.password}
-            >
-            </TextInput>
-
-          </View>
-          <TouchableOpacity style={styles.btnlogin}
-            onPress={this.Login}>
-
-            <Text style={styles.titlelogin}>LOGIN</Text>
-          </TouchableOpacity>
-          <Divider style={styles.divider}></Divider>
-          <FontAwesome.Button
-            name="facebook"
-            backgroundColor='#3b5998' style={styles.btnFacebook}>
-            <Text style={styles.titlelogin}>Login with Facebook</Text>
-          </FontAwesome.Button>
-          <Text style={styles.kc}></Text>
-          <GoogleSigninButton
-            style={{ width: 192, height: 48 }}
-            size={GoogleSigninButton.Size.Wide}
-            color={GoogleSigninButton.Color.Dark}
-            onPress={this._signIn} />
-            <Text> {this.state.name}</Text>
-            <Text> {this.state.email}</Text>
-            
+        <View>
+          <Text> {this.state.name}</Text>
+          <Text> {this.state.email}</Text>
 
         </View>
 
+        <GoogleSigninButton
+          style={{ width: 192, height: 48 }}
+          size={GoogleSigninButton.Size.Wide}
+          color={GoogleSigninButton.Color.Dark}
+          onPress={this._signIn} />
+        {/* <Text> {this.state.name}</Text>
+            <Text> {this.state.email}</Text> */}
+
+
       </View>
+
+
     );
   }
   componentDidMount() {
@@ -123,16 +93,20 @@ export default class Login extends Component {
       //iosClientId: '<FROM DEVELOPER CONSOLE>', // [iOS] optional, if you want to specify the client ID of type iOS (otherwise, it is taken from GoogleService-Info.plist)
     });
   }
-  
- _signIn = async () => {
+
+  _signIn = async () => {
     try {
       await GoogleSignin.hasPlayServices();
       const userInfo = await GoogleSignin.signIn();
-      console.log(userInfo)
+      // console.log(userInfo)
+      // this.setState({
+      //   name: userInfo.user.name,
+      //   email: userInfo.user.email
+      // });
+      this.props.navigation.navigate("App");
 
-      this.setState({ 
-        name: userInfo.user.name,
-        email : userInfo.user.email });
+
+
     } catch (error) {
       if (error.code === statusCodes.SIGN_IN_CANCELLED) {
         // user cancelled the login flow

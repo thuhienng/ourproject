@@ -29,10 +29,14 @@ import FontAwesome from 'react-native-vector-icons/FontAwesome5';
 import Home from './components/Home';
 import Journal from './components/Journal';
 import Profile from './components/Profile';
+import Signin from './components/Signin';
 
 const Tab = createBottomTabNavigator();
 
 class App extends Component{
+    static navigationOptions = {
+    headerShown: false,
+  }
   render(){
     return(
       <>
